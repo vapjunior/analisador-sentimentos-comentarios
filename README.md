@@ -1,36 +1,23 @@
-# 🛍️ Analisador de Sentimentos em Comentários de Produto
+# Analisador de Sentimentos em Comentários de Produto
 
-![Vue.js](https://img.shields.io/badge/Vue.js-3.4.0-4FC08D?style=flat&logo=vue.js&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-5.0.0-646CFF?style=flat&logo=vite&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.3.0-06B6D4?style=flat&logo=tailwind-css&logoColor=white)
-![Google AI](https://img.shields.io/badge/Google_AI-Studio-4285F4?style=flat&logo=google&logoColor=white)
+Este projeto é uma aplicação web desenvolvida para o minicurso "Build With A.I." (Unimar & Google). O objetivo é demonstrar a integração de IA generativa com práticas modernas de desenvolvimento web, permitindo análise automática de sentimentos em comentários de produtos utilizando Vue.js 3 e Google AI Studio.
 
-**Projeto desenvolvido para o minicurso "Build With A.I." - Unimar & Google**
+## Funcionalidades
 
-Uma aplicação web moderna (SPA) que demonstra a integração de **IA generativa** com práticas de **desenvolvimento web**, permitindo análise automática de sentimentos em comentários de produtos usando Vue.js 3 e Google AI Studio.
+- Comentários interativos: interface para adicionar comentários sobre produtos
+- Análise de sentimento automática: integração com Google AI Studio (Gemini) para classificação em tempo real
+- Visualização de dados: estatísticas dos sentimentos analisados
+- Persistência local: dados salvos no localStorage do navegador
+- Interface responsiva com Tailwind CSS
+- Performance otimizada com Vite
 
-## ✨ Demonstração
+## Tipos de Análise
 
-![Preview da Aplicação](https://via.placeholder.com/800x400/3b82f6/ffffff?text=Preview+da+Aplicação)
+- Positivo: elogios, satisfação, recomendações
+- Negativo: críticas, insatisfação, problemas relatados
+- Neutro: comentários informativos ou sem opinião clara
 
-## 🎯 Funcionalidades Principais
-
-- **📝 Comentários Interativos**: Interface intuitiva para adicionar comentários sobre produtos
-- **🤖 Análise de Sentimento Automática**: Integração com Google AI Studio (Gemini) para classificação em tempo real
-- **📊 Visualização de Dados**: Estatísticas visuais dos sentimentos analisados
-- **💾 Persistência Local**: Dados salvos no localStorage do navegador
-- **🎨 Interface Moderna**: Design responsivo com Tailwind CSS
-- **⚡ Performance Otimizada**: Carregamento rápido com Vite
-
-### 🧠 Tipos de Análise
-
-- **😊 Positivo**: Elogios, satisfação, recomendações
-- **😞 Negativo**: Críticas, insatisfação, problemas relatados
-- **😐 Neutro**: Comentários informativos ou sem opinião clara
-
-## 🏗️ Arquitetura da Aplicação
-
-### 📁 Estrutura de Pastas
+## Estrutura da Aplicação
 
 ```
 src/
@@ -56,159 +43,108 @@ src/
 └── main.js          # Bootstrap da aplicação
 ```
 
-### 🎯 Padrões de Desenvolvimento
+## Padrões de Desenvolvimento
 
-- **⚛️ Composition API**: Uso da Composition API do Vue 3
-- **🔄 Reatividade**: Sistema reativo para atualizações em tempo real
-- **🧩 Modularização**: Componentes desacoplados e reutilizáveis
-- **📦 Gestão de Estado**: Centralizada com Pinia
-- **🎨 Design System**: Componentes padronizados com Tailwind
+- Uso da Composition API do Vue 3
+- Sistema reativo para atualizações em tempo real
+- Componentes desacoplados e reutilizáveis
+- Gerenciamento de estado centralizado com Pinia
+- Componentes padronizados com Tailwind
 
-## 🚀 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 ### Frontend
-- **Vue.js 3** - Framework progressivo
-- **Vite** - Ferramenta de build ultrarrápida
-- **Vue Router** - Roteamento oficial do Vue
-- **Pinia** - Gerenciamento de estado moderno
-- **Tailwind CSS** - Framework CSS utilitário
+- Vue.js 3
+- Vite
+- Vue Router
+- Pinia
+- Tailwind CSS
 
 ### IA e APIs
-- **Google AI Studio** - Análise de sentimento com Gemini
-- **@google/generative-ai** - SDK oficial do Google AI
+- Google AI Studio (Gemini)
+- @google/generative-ai (SDK oficial)
 
 ### Desenvolvimento
-- **ESLint** - Linting de código
-- **Prettier** - Formatação de código
-- **PostCSS** - Processamento de CSS
-- **Autoprefixer** - Compatibilidade CSS
+- ESLint
+- Prettier
+- PostCSS
+- Autoprefixer
 
-## 📋 Pré-requisitos
+## Pré-requisitos
 
-- **Node.js** 18.0+ e npm/yarn
-- **Chave da API Google AI Studio** (opcional - funciona com mock)
-- **Navegador moderno** com suporte a ES6+
+- Node.js 18.0+ e npm ou yarn
+- Chave da API Google AI Studio (opcional, funciona com mock)
+- Navegador moderno com suporte a ES6+
 
-## ⚙️ Instalação e Configuração
+## Instalação e Configuração
 
-### 1. Clone o Repositório
+1. Clone o repositório:
 
-```bash
-git clone <url-do-repositorio>
-cd analisador-sentimentos-comentarios
-```
+   ```bash
+   git clone <url-do-repositorio>
+   cd analisador-sentimentos-comentarios
+   ```
 
-### 2. Instale as Dependências
+2. Instale as dependências:
 
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
-### 3. Configure as Variáveis de Ambiente
+3. Configure as variáveis de ambiente:
 
-Copie o arquivo de exemplo e configure:
+   ```bash
+   cp env.example .env
+   ```
+   Edite o arquivo `.env` e adicione sua chave da API:
+   
+   ```env
+   VITE_GOOGLE_AI_API_KEY=sua_chave_aqui
+   ```
 
-```bash
-cp env.example .env
-```
+4. Inicie o servidor de desenvolvimento:
 
-Edite o arquivo `.env` e adicione sua chave da API:
+   ```bash
+   npm run dev
+   ```
+   A aplicação estará disponível em: http://localhost:3000
 
-```env
-# Google AI Studio API Key (opcional)
-VITE_GOOGLE_AI_API_KEY=sua_chave_aqui
-```
+## Configuração da API Google AI Studio
 
-### 4. Inicie o Servidor de Desenvolvimento
-
-```bash
-npm run dev
-```
-
-A aplicação estará disponível em: `http://localhost:3000`
-
-## 🔑 Configuração da API Google AI Studio
-
-### Obtendo a Chave da API
-
-1. Acesse [Google AI Studio](https://aistudio.google.com/app/apikey)
+1. Acesse https://aistudio.google.com/app/apikey
 2. Faça login com sua conta Google
 3. Clique em "Create API Key"
 4. Copie a chave gerada
 5. Cole no arquivo `.env`
 
-### Modo de Fallback
+Se a API não estiver configurada, a aplicação utiliza análise mock baseada em palavras-chave, exibe aviso sobre o modo demonstração e mantém todas as funcionalidades ativas.
 
-Se a API não estiver configurada, a aplicação automaticamente:
-- Usa análise mock baseada em palavras-chave
-- Exibe aviso sobre o modo demonstração
-- Mantém todas as funcionalidades ativas
-
-## 🛠️ Scripts Disponíveis
+## Scripts Disponíveis
 
 ```bash
-# Desenvolvimento
 npm run dev          # Inicia servidor de desenvolvimento
-
-# Build
 npm run build        # Cria build de produção
 npm run preview      # Visualiza build localmente
-
-# Qualidade de Código
 npm run lint         # Executa ESLint
 npm run format       # Formata código com Prettier
 ```
 
-## 📊 Fluxo de Funcionamento
+## Fluxo de Funcionamento
 
-### 1. **Interação do Usuário**
-- Usuário visualiza detalhes do produto
-- Preenche formulário de comentário
-- Submete o comentário
+1. O usuário visualiza detalhes do produto e preenche o formulário de comentário
+2. Os dados são validados no frontend e o objeto comentário é criado
+3. O texto é enviado para análise de sentimento (Google AI Studio ou mock)
+4. O resultado é armazenado no localStorage e a interface é atualizada em tempo real
 
-### 2. **Processamento**
-- Validação dos dados no frontend
-- Criação do objeto comentário
-- Chamada para análise de sentimento
+## Personalização
 
-### 3. **Análise de IA**
-- Envio do texto para Google AI Studio
-- Processamento com modelo Gemini
-- Retorno da classificação (positivo/negativo/neutro)
+Para modificar cores e temas, edite o arquivo `tailwind.config.js`.
 
-### 4. **Persistência e Exibição**
-- Armazenamento no localStorage
-- Atualização da interface em tempo real
-- Exibição de estatísticas visuais
+Para adicionar novos componentes, crie o arquivo na pasta `src/components/`, utilize a Composition API e importe nos componentes pais.
 
-## 🎨 Personalização
+## Estrutura dos Dados
 
-### Modificando Cores e Temas
-
-Edite o arquivo `tailwind.config.js`:
-
-```js
-theme: {
-  extend: {
-    colors: {
-      primary: {
-        500: '#sua-cor-primaria',
-        // ...
-      }
-    }
-  }
-}
-```
-
-### Adicionando Novos Componentes
-
-1. Crie o arquivo na pasta `src/components/`
-2. Use a Composition API
-3. Importe e use nos componentes pais
-
-## 🔧 Estrutura dos Dados
-
-### Objeto Comentário
+Exemplo de objeto comentário:
 
 ```javascript
 {
@@ -225,7 +161,7 @@ theme: {
 }
 ```
 
-### Resultado da Análise
+Exemplo de resultado da análise:
 
 ```javascript
 {
@@ -237,112 +173,34 @@ theme: {
 }
 ```
 
-## 📈 Diagramas de Arquitetura
+## Diagramas de Arquitetura
 
-### Diagrama de Arquitetura
-- 📄 **Arquivo**: `docs/architecture-diagram.xml`
-- 🔧 **Formato**: Draw.io XML
-- 📋 **Conteúdo**: Estrutura em camadas da aplicação
+Os diagramas estão disponíveis na pasta `docs/` nos arquivos `architecture-diagram.xml` e `sequence-diagram.xml` (formato Draw.io XML). Para visualizar, acesse https://app.diagrams.net/ e importe os arquivos.
 
-### Diagrama de Sequência
-- 📄 **Arquivo**: `docs/sequence-diagram.xml`
-- 🔧 **Formato**: Draw.io XML
-- 📋 **Conteúdo**: Fluxo de adição de comentário
 
-Para visualizar:
-1. Acesse [Draw.io](https://app.diagrams.net/)
-2. Importe os arquivos XML
-3. Visualize e edite conforme necessário
 
-## 🚀 Deploy em Produção
+## Solução de Problemas
 
-### Build de Produção
+- Erro de CORS: verifique se a API key está correta e se o domínio está autorizado
+- Análise não funciona: verifique conexão com internet, validade da API key ou utilize o modo mock
+- Build falha: limpe `node_modules/` e reinstale, verifique compatibilidade do Node.js
 
-```bash
-npm run build
-```
+## Contribuição
 
-### Opções de Deploy
-
-1. **Vercel** (Recomendado)
-```bash
-npm install -g vercel
-vercel
-```
-
-2. **Netlify**
-- Faça upload da pasta `dist/`
-- Configure redirecionamentos SPA
-
-3. **GitHub Pages**
-```bash
-npm run build
-# Deploy da pasta dist/
-```
-
-### Variáveis de Ambiente em Produção
-
-Configure `VITE_GOOGLE_AI_API_KEY` na plataforma de deploy.
-
-## 🐛 Solução de Problemas
-
-### Erro de CORS
-- Verifique se a API key está correta
-- Confirme se o domínio está autorizado
-
-### Análise não funciona
-- Verifique a conexão com internet
-- Confirme se a API key é válida
-- Use o modo mock para testes
-
-### Build falha
-- Limpe `node_modules/` e reinstale
-- Verifique compatibilidade do Node.js
-
-## 🤝 Contribuindo
-
-1. Fork o repositório
+1. Faça fork do repositório
 2. Crie uma branch (`git checkout -b feature/nova-funcionalidade`)
 3. Commit suas mudanças (`git commit -m 'Adiciona nova funcionalidade'`)
 4. Push para a branch (`git push origin feature/nova-funcionalidade`)
 5. Abra um Pull Request
 
-## 📝 Licença
+## Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
+Este projeto está sob a licença MIT.
 
-## 👨‍💻 Autores
 
-- **Build With A.I.** - Minicurso Unimar & Google
-- **Desenvolvimento**: Demonstração educacional
 
-## 🎓 Contexto Educacional
+## Contexto Educacional
 
-Este projeto foi desenvolvido como material didático para o evento **"Build With A.I."**, uma parceria entre **Unimar** e **Google**, com o objetivo de demonstrar:
+Este projeto foi desenvolvido como material didático para o evento "Build With A.I.", uma parceria entre Unimar e Google, com o objetivo de demonstrar integração de IA generativa em aplicações web, boas práticas de desenvolvimento com Vue.js 3 e arquitetura moderna de SPAs.
 
-- Integração de IA generativa em aplicações web
-- Boas práticas de desenvolvimento com Vue.js 3
-- Arquitetura moderna de SPAs
-- Uso prático de APIs de IA
-
-## 📞 Suporte
-
-Para dúvidas sobre o projeto:
-- 📧 Email: suporte@builwithai.com
-- 💬 Discord: Build With A.I. Community
-- 📚 Documentação: [docs.buildwithai.com](https://docs.buildwithai.com)
-
-## 🔮 Próximas Funcionalidades
-
-- [ ] Sistema de autenticação
-- [ ] Comentários aninhados (respostas)
-- [ ] Análise de múltiplos idiomas
-- [ ] Dashboard administrativo
-- [ ] API backend completa
-- [ ] Integração com banco de dados
-- [ ] Notificações em tempo real
-- [ ] Exportação de relatórios
-
----
-
-**💡 Desenvolvido com ❤️ para demonstrar o poder da IA Generativa no desenvolvimento web moderno.** 
+Desenvolvido para demonstrar o uso de IA generativa no desenvolvimento web moderno.
