@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="drawio" modified="2024-01-15T10:00:00.000Z" agent="5.0" etag="xxx" version="21.0.0" type="device">
+  <diagram name="Sequence-Diagram" id="sequence">
+    <mxGraphModel dx="1422" dy="750" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Título -->
+        <mxCell id="title" value="DIAGRAMA DE SEQUÊNCIA - ANÁLISE DE SENTIMENTOS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="200" y="20" width="420" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Atores/Sistemas -->
+        <mxCell id="user" value="Usuário" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="80" width="30" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="comment-form-header" value="CommentForm" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="140" y="80" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="store-header" value="commentStore" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="280" y="80" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="service-header" value="sentimentService" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="420" y="80" width="110" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="google-ai-header" value="Google AI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="570" y="80" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="localstorage-header" value="localStorage" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="710" y="80" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Linhas de Vida -->
+        <mxCell id="user-lifeline" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="60" y="140" width="10" height="520" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="form-lifeline" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="185" y="140" width="10" height="520" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="store-lifeline" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="325" y="140" width="10" height="520" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="service-lifeline" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="470" y="140" width="10" height="520" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="ai-lifeline" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="615" y="140" width="10" height="520" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="storage-lifeline" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="755" y="140" width="10" height="520" as="geometry" />
+        </mxCell>
+        
+        <!-- Mensagens/Interações -->
+        
+        <!-- 1. Usuário preenche formulário -->
+        <mxCell id="msg1" value="1: Preenche comentário" style="html=1;verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="70" y="180" as="sourcePoint" />
+            <mxPoint x="185" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 2. Submete formulário -->
+        <mxCell id="msg2" value="2: Submete formulário" style="html=1;verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="70" y="220" as="sourcePoint" />
+            <mxPoint x="185" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 3. Valida dados -->
+        <mxCell id="msg3" value="3: Valida dados do formulário" style="html=1;verticalAlign=bottom;startArrow=none;endArrow=block;startSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="195" y="260" as="sourcePoint" />
+            <mxPoint x="185" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 4. Chama store -->
+        <mxCell id="msg4" value="4: adicionarComentario(dados)" style="html=1;verticalAlign=bottom;startArrow=none;endArrow=block;startSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="195" y="300" as="sourcePoint" />
+            <mxPoint x="325" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 5. Cria objeto comentário -->
+        <mxCell id="msg5" value="5: Cria objeto comentário" style="html=1;verticalAlign=bottom;startArrow=none;endArrow=block;startSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="335" y="340" as="sourcePoint" />
+            <mxPoint x="325" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 6. Chama serviço de análise -->
+        <mxCell id="msg6" value="6: analisarSentimento(texto)" style="html=1;verticalAlign=bottom;startArrow=none;endArrow=block;startSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="335" y="380" as="sourcePoint" />
+            <mxPoint x="470" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 7. Prepara prompt -->
+        <mxCell id="msg7" value="7: Prepara prompt para IA" style="html=1;verticalAlign=bottom;startArrow=none;endArrow=block;startSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="480" y="420" as="sourcePoint" />
+            <mxPoint x="470" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 8. Chama Google AI -->
+        <mxCell id="msg8" value="8: generateContent(prompt)" style="html=1;verticalAlign=bottom;startArrow=none;endArrow=block;startSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="480" y="460" as="sourcePoint" />
+            <mxPoint x="615" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 9. Processa com IA -->
+        <mxCell id="msg9" value="9: Analisa sentimento" style="html=1;verticalAlign=bottom;startArrow=none;endArrow=block;startSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="625" y="500" as="sourcePoint" />
+            <mxPoint x="615" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 10. Retorna resultado -->
+        <mxCell id="msg10" value="10: Retorna análise JSON" style="html=1;verticalAlign=bottom;startArrow=none;endArrow=open;startSize=8;curved=0;rounded=0;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="615" y="540" as="sourcePoint" />
+            <mxPoint x="480" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 11. Processa resposta -->
+        <mxCell id="msg11" value="11: Processa e valida resposta" style="html=1;verticalAlign=bottom;startArrow=none;endArrow=block;startSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="480" y="580" as="sourcePoint" />
+            <mxPoint x="470" y="580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 12. Retorna análise ao store -->
+        <mxCell id="msg12" value="12: Retorna objeto análise" style="html=1;verticalAlign=bottom;startArrow=none;endArrow=open;startSize=8;curved=0;rounded=0;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="470" y="620" as="sourcePoint" />
+            <mxPoint x="335" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 13. Atualiza comentário -->
+        <mxCell id="msg13" value="13: Anexa análise ao comentário" style="html=1;verticalAlign=bottom;startArrow=none;endArrow=block;startSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="335" y="170" as="sourcePoint" />
+            <mxPoint x="325" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 14. Salva no localStorage -->
+        <mxCell id="msg14" value="14: Salva comentários" style="html=1;verticalAlign=bottom;startArrow=none;endArrow=block;startSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="335" y="200" as="sourcePoint" />
+            <mxPoint x="755" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 15. Confirma salvamento -->
+        <mxCell id="msg15" value="15: Confirma salvamento" style="html=1;verticalAlign=bottom;startArrow=none;endArrow=open;startSize=8;curved=0;rounded=0;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="755" y="240" as="sourcePoint" />
+            <mxPoint x="335" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 16. Retorna sucesso ao form -->
+        <mxCell id="msg16" value="16: Retorna comentário criado" style="html=1;verticalAlign=bottom;startArrow=none;endArrow=open;startSize=8;curved=0;rounded=0;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="325" y="280" as="sourcePoint" />
+            <mxPoint x="195" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 17. Limpa formulário -->
+        <mxCell id="msg17" value="17: Limpa formulário" style="html=1;verticalAlign=bottom;startArrow=none;endArrow=block;startSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="195" y="320" as="sourcePoint" />
+            <mxPoint x="185" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 18. Feedback ao usuário -->
+        <mxCell id="msg18" value="18: Exibe feedback de sucesso" style="html=1;verticalAlign=bottom;startArrow=none;endArrow=open;startSize=8;curved=0;rounded=0;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="185" y="360" as="sourcePoint" />
+            <mxPoint x="70" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Notas -->
+        <mxCell id="note1" value="Fluxo Principal:&#xa;Adição de Comentário&#xa;com Análise de Sentimento" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="40" y="700" width="140" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="note2" value="Fallback:&#xa;Se Google AI falhar,&#xa;usa análise mock" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="200" y="700" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="note3" value="Persistência:&#xa;Dados salvos no&#xa;localStorage do browser" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="340" y="700" width="130" height="80" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile> 

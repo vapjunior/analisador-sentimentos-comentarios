@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="drawio" modified="2024-01-15T10:00:00.000Z" agent="5.0" etag="xxx" version="21.0.0" type="device">
+  <diagram name="Arquitetura-App" id="architecture">
+    <mxGraphModel dx="1422" dy="750" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Título -->
+        <mxCell id="title" value="ARQUITETURA - ANALISADOR DE SENTIMENTOS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="250" y="20" width="320" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Camada de Apresentação -->
+        <mxCell id="presentation-layer" value="CAMADA DE APRESENTAÇÃO" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="50" y="80" width="720" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Componentes Vue -->
+        <mxCell id="app-vue" value="App.vue&#xa;(Componente Raiz)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="70" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="product-view" value="ProductView.vue&#xa;(View Principal)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="220" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="product-card" value="ProductCard.vue&#xa;(Detalhes Produto)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="370" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="comment-form" value="CommentForm.vue&#xa;(Formulário)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="520" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="comment-list" value="CommentList.vue&#xa;(Lista Comentários)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="670" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="sentiment-badge" value="SentimentBadge.vue&#xa;(Badge Sentimento)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="520" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Camada de Lógica -->
+        <mxCell id="logic-layer" value="CAMADA DE LÓGICA DE NEGÓCIO" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="50" y="320" width="720" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Stores e Composables -->
+        <mxCell id="comment-store" value="commentStore.js&#xa;(Pinia Store)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="120" y="380" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="sentiment-composable" value="useSentimentAnalysis.js&#xa;(Composable)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="280" y="380" width="140" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="router" value="Vue Router&#xa;(Roteamento)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="460" y="380" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Camada de Serviços -->
+        <mxCell id="service-layer" value="CAMADA DE SERVIÇOS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f3ff;strokeColor=#36c;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="50" y="480" width="720" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="sentiment-service" value="sentimentService.js&#xa;(Análise IA)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#36c;" vertex="1" parent="1">
+          <mxGeometry x="200" y="540" width="140" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="storage-service" value="localStorage&#xa;(Persistência Local)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#36c;" vertex="1" parent="1">
+          <mxGeometry x="380" y="540" width="140" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Camada Externa -->
+        <mxCell id="external-layer" value="SERVIÇOS EXTERNOS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#666;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="50" y="640" width="720" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="google-ai" value="Google AI Studio&#xa;(Gemini API)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="150" y="700" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="browser-storage" value="Browser&#xa;(localStorage)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="320" y="700" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="mock-analysis" value="Análise Mock&#xa;(Fallback)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="490" y="700" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Setas de Conexão -->
+        <mxCell id="arrow1" value="" style="endArrow=classic;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="product-view" target="comment-store">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="250" as="sourcePoint" />
+            <mxPoint x="180" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="arrow2" value="" style="endArrow=classic;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="sentiment-composable" target="sentiment-service">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="450" as="sourcePoint" />
+            <mxPoint x="270" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="arrow3" value="" style="endArrow=classic;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="sentiment-service" target="google-ai">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="270" y="610" as="sourcePoint" />
+            <mxPoint x="210" y="680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="arrow4" value="" style="endArrow=classic;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="comment-store" target="storage-service">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="180" y="450" as="sourcePoint" />
+            <mxPoint x="450" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Fluxo de Dados -->
+        <mxCell id="data-flow" value="FLUXO DE DADOS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="600" y="320" width="140" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="flow1" value="1. Usuário insere comentário" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="600" y="360" width="140" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="flow2" value="2. Store processa dados" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="600" y="380" width="140" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="flow3" value="3. Serviço analisa sentimento" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="600" y="400" width="140" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="flow4" value="4. Google AI retorna análise" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="600" y="420" width="140" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="flow5" value="5. Dados salvos localmente" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="600" y="440" width="140" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="flow6" value="6. UI atualizada com resultado" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="600" y="460" width="140" height="20" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile> 
