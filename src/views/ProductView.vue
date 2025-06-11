@@ -23,6 +23,12 @@
             <span class="text-blue-500 mr-3 text-lg">🤖</span>
             <div class="text-sm text-blue-700">
               <p class="font-medium mb-1">Análise de Sentimento com IA</p>
+              <p>
+                {{ isGoogleAIConfigured 
+                  ? 'Esta aplicação utiliza o Google AI Studio (Gemini) para análise automática de sentimentos em tempo real.'
+                  : 'API do Google AI não configurada. Utilizando análise mock para demonstração.' 
+                }}
+              </p>
               <p class="mt-2 text-xs">
                 Desenvolvido para o minicurso "Build With A.I." - Unimar & Google
               </p>
@@ -124,6 +130,7 @@ import CommentList from '@/components/CommentList.vue'
 
 // Stores e Composables
 const commentStore = useCommentStore()
+const { isConfigured: isGoogleAIConfigured } = useSentimentAnalysis()
 
 // Dados do produto (normalmente viriam de uma API ou props)
 const produto = ref({
