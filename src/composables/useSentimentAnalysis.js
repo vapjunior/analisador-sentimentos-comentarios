@@ -1,11 +1,13 @@
 import { ref, computed } from 'vue'
-import { analisarSentimento } from '@/services/sentimentService'
+import { analisarSentimento, isGoogleAIConfigured } from '@/services/sentimentService'
 
 export function useSentimentAnalysis() {
   const isAnalyzing = ref(false)
   const error = ref(null)
   const lastAnalysis = ref(null)
 
+  // Configuração da API
+  const isConfigured = computed(() => isGoogleAIConfigured())
 
   /**
    * Analisa o sentimento de um texto
@@ -92,6 +94,7 @@ export function useSentimentAnalysis() {
     isAnalyzing,
     error,
     lastAnalysis,
+    isConfigured,
 
     // Métodos
     analyze,
